@@ -1,0 +1,96 @@
+body {
+  background-color: #FAFAFA !important;
+}
+
+.section-title {
+  border-bottom: 2px solid #3B5998;
+  margin-top: 0;
+  text-align: center;
+}
+
+.mission-paragraph {
+  margin: 130px;
+  margin-bottom: 20px;
+}
+
+.md-title {
+  text-align: center;
+}
+
+md-tabs-canvas {
+  background-color: #2B3636;
+}
+
+.school-picture {
+  height: 250px;
+  width: 250px;
+}
+
+.school-card {
+  width: 65% !important;
+  margin: auto;
+}
+
+.school-font-name {
+  font-size: 25px;
+}
+
+.school-font-members {
+  font-size: 20px;
+}
+
+.md-tab {
+  color: white !important;
+}
+
+.main-page {
+  min-height: 100%;
+  background-color: #FAFAFA !important;
+}
+
+md-content {
+  background-color: #FAFAFA !important;
+}
+
+/* Workout Cards */
+.article-card {
+  text-align: center;
+  width: 55% !important;
+  margin: auto;
+}
+
+.article-card p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.title-label {
+  float: right;
+}
+
+.spinner-hide .loading{
+  visibility: visible;
+}
+.spinner-show .loading{
+  visibility: hidden;
+}
+
+a {
+  color: #3B5998 !important;
+}
+
+md-card {
+  box-shadow: 0 1px 3px 0 #2B3636,0 1px 1px 0 #2B3636,0 2px 1px -1px #2B3636;
+}
+
+md-divider {
+  border-color: #2B3636;
+}
+
+/* Diet Section */
+
+.diet-section {
+  margin-top: 50px;
+  top: 0;
+  min-width: 50%;
+}
