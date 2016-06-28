@@ -40,79 +40,53 @@
 
 </head>
 
-<body ng-app="PCApp" ng-controller="PCCtrl" ng-cloak>
+<body ng-app="PCApp" ng-cloak>
 
-  <div layout="row" layout-xs="column" class="main-page">
-    <div flex>
-      <md-tabs md-dynamic-height md-border-bottom>
-
-        <md-tab label="Home">
-          <md-content>
-            <h1 class="md-display-2 section-title">Project Civility</h1>
-
-          </md-content>
-        </md-tab>
-
-        <md-tab label="Mission">
-          <md-content class="md-padding">
-            <h1 class="md-display-2 section-title">Project Civility's Mission</h1>
-            <p class="mission-paragraph md-title">Project Civility is an initiative conceived by the Hamilton campus Student Government Association (SGA) in response to rude, disrespectful and hurtful comments and behaviors demonstrated by students at the beginning of the 2011-12 academic year. The organization is intended to foster climates and cultures at Miami University and around the world where civility, respect, and understanding are essential to the communities in which we live and serve. The initiative requires an on-going effort as we strive to make the world feel friendly, welcoming, and accepting of everyone.</p>
-            <br>
-            <p class="md-title">Have a question? Get in touch with us at adesehso@miamioh.edu</p>
-          </md-content>
-        </md-tab>
-
-        <!-- Schools Section -->
-        <md-tab label="Schools">
-          <md-content class="md-padding">
-            <h1 class="md-display-2 section-title">Our Chapters</h1>
-            <div ng-repeat="school in schools" layout-align="center center" layout-margin layout-padding>
-              <md-card layout="row" class="school-card">
-                <img ng-src="{{school.imageUrl}}" class="spinner school-picture" imageonload/>
-                <span class="loading"> <img src="https://www.yugma.com/images/loading-animation-7.gif"/></span>
-                <div layout="column" layout-margin layout-padding>
-                  <p class="md-display-5 school-font-name"><a ng-href="{{school.url}}" target="_blank">{{school.name}}</a></p>
-                  <p class="md-display-6 school-font-name">Members: {{school.members}}</p>
-                </div>
-              </md-card>
-            </div>
-            <br><h3 class="md-display-5 md-title">Bring Project Civility to your school <a ng-href="">NOW!</a></h3>
-          </md-content>
-        </md-tab>
-
-        <!-- Articles Section -->
-        <md-tab label="Articles">
-          <md-content class="md-padding">
-            <h1 class="md-display-2 section-title">Articles</h1>
-            <div ng-repeat="article in articles" layout="row" layout-padding layout-margin>
-              <md-card class="article-card" flex>
-                <h3 class="md-title"><strong> <a ng-href="{{article.url}}" target="_blank">{{article.title}}</a> </strong></h3>
-                <p><strong>Date: </strong>{{article.date}} </p><br>
-                <md-divider></md-divider><br>
-                <p><strong></strong> {{article.exampleText}} </p><br>
-              </md-card>
-            </div>
-          </md-content>
-        </md-tab>
-
-      </md-tabs>
-    </div>
-  </div>
+  <div ng-include="'views/nav.html'"></div>
+  <div ng-include="'views/home.html'"></div>
 
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-resource.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.13.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.3/angular-moment.js"></script>
 
   <!-- Angular Material Library -->
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js"></script>
 
   <!-- Your application bootstrap  -->
   <script type="text/javascript">
     angular.module('PCApp', ['ngMaterial']);
   </script>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/app.js"></script>
+
+  <script src="scripts/controllers/nav.js"></script>
+  <script src="scripts/controllers/idea.js"></script>
+  <script src="scripts/controllers/auth.js"></script>
+  <script src="scripts/controllers/browse.js"></script>
+  <script src="scripts/controllers/profile.js"></script>
+  <script src="scripts/controllers/home.js"></script>
+
+  <script src="scripts/services/auth.js"></script>
+  <script src="scripts/services/idea.js"></script>
+  <script src="scripts/services/comment.js"></script>
+  <script src="scripts/services/profile.js"></script>
+
 </body>
 </html>

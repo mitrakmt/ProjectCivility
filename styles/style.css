@@ -8,9 +8,34 @@ body {
   text-align: center;
 }
 
+.section-paragraph {
+  text-align: center;
+}
+
+.background-image {
+  background: url("images/mup.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .mission-paragraph {
   margin: 130px;
+  margin-top: 30px;
   margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.vertical-picture {
+  height: 100%;
+  width: 100%;
+  max-height: 700px;
+}
+
+.horizontal-picture {
+  height: 100%;
+  width: 100%;
 }
 
 .md-title {
@@ -87,10 +112,178 @@ md-divider {
   border-color: #2B3636;
 }
 
-/* Diet Section */
+/* Footer */
 
-.diet-section {
-  margin-top: 50px;
-  top: 0;
-  min-width: 50%;
+.footer {
+  padding-top: 5px;
+  text-align: center;
+  background: transparent;
+  width: 100%;
+  opacity: 1;
+}
+
+.icons {
+  decoration: none;
+  padding: 0.3em;
+}
+
+.md-button {
+  padding-top: 4px;
+}
+
+.md-button.md-fab.md-mini {
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-text {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Form */
+
+.auth-forms {
+  max-width:400px;
+  margin:0 auto;
+  padding:1px 25px 25px 25px;
+}
+
+/* Profile */
+
+.img-circle.gravatar {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.img-circle.profile-gravatar {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.ddmenu li {
+  width: 100%;
+  box-shadow: none;
+}
+
+.ddmenu li .md-button:hover {
+  background-color: transparent;
+  color: #3F51B5;
+}
+
+
+/* Forum */
+
+.panel-title {
+  font-weight: bold;
+}
+
+.img-browse {
+  padding-top: 30px;
+}
+
+.panel-success > .panel-heading .badge {
+  color: #81C784;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.panel-warning > .panel-heading .badge {
+  background-color: #FFFFFF;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.partial {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* List */
+
+.list-group-item {
+  margin-top: -20px;
+}
+
+.list-group .list-group-item .row-picture img {
+  width: 50px;
+  height: 50px;
+}
+
+.idea-card {
+  padding: 12px;
+}
+
+/* Comments */
+
+.well.well-sm.cmt {
+  color: #5E5E5E;
+  font-size: 14px;
+}
+
+.cmt-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cmt-time {
+  font-size: 12px;
+}
+
+.img-circle.comment.gravatar {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.idea-card:hover {
+  transition: all .2s cubic-bezier(.55, 0, .55, .2);
+  -webkit-box-shadow: #3c3Da5 0px 2px 10px 0px;
+}
+
+.teamimage {
+  float: left;
+}
+
+.teamname {
+  padding-left: 15px;
+  float: left;
+}
+
+.popular {
+  color: #FF3111;
+  size: 100%;
+  height: 20px;
+  width: 20px;
+  padding-left: 15px;
+}
+
+.popular-text {
+  font-size: 13px;
+  padding-left: 25px;
+  font-weight: bold 400;
+  color: #FF3111 !important;
+}
+
+/* Nav Bar */
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: #3F51B5;
+  z-index: 100;
+  width: 100%;
+  opacity: 1;
+}
+
+.ddmenu li {
+  width: 100%;
+  box-shadow: none;
+}
+
+.ddmenu li .md-button:hover {
+  background-color: transparent;
+  color: #3F51B5;
 }

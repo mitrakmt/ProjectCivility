@@ -1,0 +1,117 @@
+<div class="row" ng-controller="NavController">
+	<div class="col-md-10 col-md-offset-1">
+		<h1 class="title">{{currentUser.profile.name}}</h1><br>
+		<div class="row">
+			<div class="col-md-12">
+				<md-card class="panel-info">
+					<div class="panel-heading brand-color">
+							<h3 class="panel-title">Profile</h3>
+						</div>
+					<div class="panel-body" layout="row" layout-xs="column">
+						<img ng-src="{{currentUser.profile.gravatar}}" class="img-circle profile-gravatar">
+						<p class="how-to-change-your-profile-picture">To change your profile picture, please visit <a href="http://www.gravatar.com" class="link" target="_blank" style="color: #3F51B5">gravatar.com</a> and click "create your own gravatar". The picture will update shortly after the account is created. :)</p>
+					</div>
+				</md-card>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<md-card class="panel-info">
+					<div class="panel-heading brand-color">
+							<h3 class="panel-title">About</h3>
+						</div>
+					<div class="panel-body">
+						<h4><strong>University</strong>: {{currentUser.profile.university}}</h4>
+						<h4><strong>Skills</strong>: {{currentUser.profile.skills}}</h4>
+					</div>
+				</md-card>
+			</div>
+
+			<div class="col-md-6">
+				<md-card class="panel-info">
+					<div class="panel-heading brand-color">
+							<h3 class="panel-title">Scheduled Event</h3>
+						</div>
+					<div class="panel-body">
+						<h4><strong>Location</strong>: Miami University</h4>
+						<h4><strong>Date</strong>: April 21, 2016</h4>
+					</div>
+				</md-card>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<md-card>
+				<md-card-title>
+					<md-card-title-text>
+				      <div ng-repeat="idea in ideaPoster">
+								<div>
+
+									<!-- Header -->
+									<div class="row">
+										<div class="col-md-8">
+											<h3><strong><a ng-href="#/browse/{{idea.ideaId}}">{{ idea.title }}</a></strong></h3>
+										</div>
+									</div>
+
+									<br />
+
+									<!-- Description -->
+									<div class="row">
+										<div class="col-md-12">
+												<md-card class="panel-info">
+													<div class="panel-heading brand-color">
+															<h3 class="panel-title">Idea Description</h3>
+														</div>
+													<div class="panel-body">
+															{{ idea.description }}
+													</div>
+												</md-card>
+										</div>
+									</div>
+
+								</div>
+							<br>
+						</div>
+
+						<div ng-repeat="idea in ideaRunner">
+							<div>
+
+								<!-- Header -->
+								<div class="row">
+									<div class="col-md-8">
+										<h3><strong><a ng-href="#/browse/{{idea.ideaId}}"> {{idea.title}} </a></strong></h3>
+									</div>
+								</div>
+
+								<br />
+
+								<!-- Description -->
+								<div class="row">
+									<div class="col-md-12">
+											<md-card class="panel-info">
+												<div class="panel-heading brand-color">
+														<h3 class="panel-title">Idea Description</h3>
+													</div>
+												<div class="panel-body">
+														{{ idea.description }}
+												</div>
+											</md-card>
+									</div>
+								</div>
+
+							</div>
+						<br>
+					</div>
+
+
+					</md-card-title-text>
+				</md-card-title>
+			</md-card>
+			<br>
+		</div>
+	</div>
+
+</div>
+</div>

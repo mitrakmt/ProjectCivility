@@ -1,0 +1,62 @@
+<div layout="row" layout-xs="column" class="main-page">
+  <div flex>
+    <md-tabs md-dynamic-height md-border-bottom>
+
+      <md-tab label="Home">
+        <md-content class="md-padding background-image">
+          <h1 class="md-display-2 section-title">Civility International</h1>
+
+          <!-- Mission -->
+          <h2 class="section-paragraph"><strong>Mission</strong></h2>
+          <p class="mission-paragraph md-title">Civility International is a non-profit organization that focus on promoting, advocating, and empowering young leaders across the United States to create a culture of civility and acceptance for everyone to learn, develop, and thrive. Through helping create and support campus wide civility organizations, Civility Global plans on changing the worlds culture. </p>
+
+          <!-- Live Feed -->
+          <h2 class="section-paragraph"><strong>Live Feed</strong></h2>
+          <div layout="row" layout-xs="column" layout-align="center" layout-padding layout-margin>
+            <img ng-src="images/pic3.jpg" class="vertical-picture" flex>
+            <img ng-src="images/pic2.jpg" class="horizontal-picture"flex>
+          </div>
+          <br>
+          <br><br>
+          <div ng-include="'views/footer.html'"></div>
+        </md-content>
+      </md-tab>
+
+      <!-- Schools Section -->
+      <md-tab label="Schools">
+        <md-content class="md-padding background-image">
+          <h1 class="md-display-2 section-title">Our Chapters</h1>
+          <div ng-repeat="school in schools" layout-align="center center" layout-margin layout-padding>
+            <md-card layout="row" class="school-card">
+              <img ng-src="{{school.imageUrl}}" class="spinner school-picture" imageonload/>
+              <span class="loading"> <img src="https://www.yugma.com/images/loading-animation-7.gif"/></span>
+              <div layout="column" layout-margin layout-padding>
+                <p class="md-display-5 school-font-name"><a ng-href="{{school.url}}" target="_blank">{{school.name}}</a></p>
+                <p class="md-display-6 school-font-name">Members: {{school.members}}</p>
+              </div>
+            </md-card>
+          </div>
+          <br><h3 class="md-display-5 md-title">Bring Project Civility to your school <a ng-href="">NOW!</a></h3>
+          <div ng-include="'views/footer.html'"></div>
+        </md-content>
+      </md-tab>
+
+      <!-- Articles Section -->
+      <md-tab label="Articles">
+        <md-content class="md-padding background-image">
+          <h1 class="md-display-2 section-title">Articles</h1>
+          <div ng-repeat="article in articles" layout="row" layout-padding layout-margin>
+            <md-card class="article-card" flex>
+              <h3 class="md-title"><strong> <a ng-href="{{article.url}}" target="_blank">{{article.title}}</a> </strong></h3>
+              <p><strong>Date: </strong>{{article.date}} </p><br>
+              <md-divider></md-divider><br>
+              <p><strong></strong> {{article.exampleText}} </p><br>
+            </md-card>
+          </div>
+          <div ng-include="'views/footer.html'"></div>
+        </md-content>
+      </md-tab>
+
+    </md-tabs>
+  </div>
+</div>
